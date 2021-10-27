@@ -4,20 +4,23 @@ import Review from "../Component/Review"
 import Form from "../Component/Form"
 import { Link } from "react-router-dom"
 import ImgThumbnail from "../Component/ImgThumbnail"
-import Footer from "../Component/Footer"
+
 
 const DisplayContainer = ({ match, glasses, addToCart, postReview }) => {
 
     let glass = glasses.find(glass => glass.id == match.params.glassId)
     // debugger
     return (
-        <div>
+        <div className="display-container-wrapper">
+                <div className="display-background"></div>
             {glasses.length > 0
                 ?
                 <div className="display-container-div">
-                    <div className="display-image-div">
+
+                   <div className="display-image-div">
                         <ImgThumbnail images={glass.image} />
                     </div>
+
                     <div className="display-info-div">
                         <div>
                             <GlassesInfo glass={glass} />
@@ -35,10 +38,11 @@ const DisplayContainer = ({ match, glasses, addToCart, postReview }) => {
                             />
                             {glass.reviews.map(review => <Review review={review} />)}
                         </div>
-                    </div>
+                </div>
+
                 </div>
                 : null}
-            <Footer />
+   
         </div>
     );
 }

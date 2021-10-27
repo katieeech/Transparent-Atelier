@@ -4,6 +4,7 @@ export default class GlassesInfo extends Component {
     render() {
         return (
             <div>
+
                 <div id="glasses-info-header">
                     <h2>{this.props.glass.name}</h2>
                     <h3>{this.props.glass.brand}</h3>

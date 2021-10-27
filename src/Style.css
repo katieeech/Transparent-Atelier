@@ -1,6 +1,6 @@
 :root {
     /* Base font size */
-    font-size: 10px;   
+    font-size: 12px;   
   }
 
   * {
@@ -350,6 +350,12 @@ max-width: 400px;
   border:whitesmoke solid 2px;
 }
 
+.glasses-card:hover{
+  border:rgb(209, 204, 204) solid 2px;
+  transition: ease-in-out all .1s
+}
+
+
 .filter-sort-div-container{
   /* border: 1px solid red; */
   margin-right:0.5rem;
@@ -453,13 +459,30 @@ text-align:left;
 
 }
 
+.display-container-wrapper{
+display:flex;
+justify-content: center;
+}
+
+.display-background{
+   background-image: url("./images/DisplayGlasses.png");
+   height:45vh;
+   background-position: center;
+}
+
 .display-container-div {
   display:flex;
   flex-wrap:wrap;
+  border-right:1px solid rgb(190, 199, 207);
+  border-left:1px solid rgb(190, 199, 207);
+
 }
 
 .display-image-div {
   width: 600px;
+  /* margin-right: 5em; */
+  padding:0 5em;
+  border-right:1px solid rgb(190, 199, 207);
   /* border: black 1px solid; */
   /* display:flex;
   flex-wrap:wrap;
@@ -476,11 +499,16 @@ text-align:left;
   width: 200px;
   float:left
 }
+.display-image-thumbnail-image:hover{
+  cursor:pointer;
+}
 
 .display-info-div {
   width:400px;
-  margin-top: 200px;
-  border: black 1px solid;
+  margin-top: 10em;
+  /* margin-right:5em; */
+  padding:0 5em;
+  /* border: black 1px solid; */
 }
 
 .glasses-info-header {
@@ -502,6 +530,22 @@ text-align:left;
 .add-to-cart-button {
   text-align: left;
   padding:15px
+}
+
+
+.gray-button{
+    border: rgb(241, 241, 241) 1px;
+    width: 10em;
+    height: 3.2em;
+    background-color:rgb(241, 241, 241);
+    margin-top: 1em;
+}
+.gray-button:hover {
+  background-color:rgb(232, 232, 233);
+  }
+
+.gray-button:active{
+  background-color: lightgray;
 }
 
 .review-form {
@@ -537,4 +581,175 @@ text-align:left;
   background-color:rgb(241, 241, 241);
   font-family: 'Noto Sans JP',sans-serif;
   margin-top: 15px;
+}
+
+
+
+
+/* Review Comp */
+.review-container-div{
+  margin-top:15px;
+  padding:20px;
+  text-align:left;
+  border-bottom: rgb(223, 217, 217) solid 1px;
+}
+
+.review-title, .review-username,.review {
+  margin-bottom: 5px;
+}
+
+/* Cart page container */
+.myShoppingCart {
+ margin-bottom: 30px;
+}
+
+.cart-container-div .continue-shopping-btn{
+  height:45px;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight:bold;
+  border-color: transparent;
+}
+
+.cart-container-div{
+padding-bottom:100px;
+}
+
+.comparison-button{
+  background:cornflowerblue;
+  color: white;
+  font-size: 1.3rem;
+  height:45px;
+  width: 150px;
+  font-weight:bold;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.total-price{
+  margin-bottom:2em;
+}
+
+.checkout-button{
+  background:lightcoral;
+  color: white;
+  font-size: 1.5rem;
+  height:45px;
+  width: 150px;
+  font-weight:bold;
+  border: none;
+}
+
+/* Cart Item */
+.cartitem-div{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+margin-bottom:30px;
+}
+
+.cart-item-image{
+  top:-50px;
+  position:relative;
+  max-width:400px;
+}
+
+#cart-item-info > * {
+  text-align: left;
+  margin: 5px;
+}
+
+.cart-quantity-div{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top: 15px;
+}
+
+.cart-quantity-div button{
+  margin-right: 10px;
+  border-radius:10px;
+}
+
+.cart-btn-container{
+  justify-content: center;
+  display: flex;
+}
+
+/* CompareContainer  */
+.compare-p{
+  font-size: 30px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.compare-page{
+display:flex;
+justify-content: center;
+padding-bottom:200px;
+}
+
+.compare-container-div{
+  display:flex;
+  flex-wrap:wrap;
+  max-width:1250px;
+/* margin: auto 0; */
+}
+
+/* CompareItem Comp */
+.img-item-compared {
+  max-width:600px;
+  margin-bottom:20px;
+}
+
+.img-comparison > *{
+  text-align:center;
+  margin:0;
+  /* border:black solid 1px; */
+}
+
+/* .x-btn {
+  border:green 1px solid;
+  background:lightgray;
+  color:white;
+  font-size:100px;
+  border-radius:100%;
+  box-sizing: border-box; 
+width:100px;
+height: 100px;
+display:flex;
+justify-content: center;
+align-items: center;
+} */
+.x-btn {
+background: rgb(231, 231, 231);
+color: white;
+text-align: center;
+width: 50px;
+height: 50px;
+border-radius: 100%;
+display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+font-weight:bold;
+text-decoration: none
+}
+
+/* to solve purple rectangle */
+.link-to-cart {
+color: inherit;
+text-decoration: inherit;
+}
+
+.img-comparison-parent-div:first-child {
+  border-right:rgb(200, 200, 200) solid 2px;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  background:rgb(241, 241, 241);
+  width: 100%;
+  text-align:left;
+  padding:20px;
 }

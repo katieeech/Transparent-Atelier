@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import GlassesFilter from "../Component/GlassesFilter"
 import GlassesCard from "../Component/GlassesCard"
-import Footer from "../Component/Footer"
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default class GlassesCardContainer extends Component {
@@ -40,7 +39,7 @@ export default class GlassesCardContainer extends Component {
                         )}
                     </div>
                 </div>
-                <Footer />
+
             </div>
         )
     }

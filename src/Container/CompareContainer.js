@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import CompareItem from "../Component/CompareItem"
-import Footer from "../Component/Footer"
 
 export default class CompareContainer extends Component {
     render() {
@@ -22,7 +21,6 @@ export default class CompareContainer extends Component {
                         )}
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }
