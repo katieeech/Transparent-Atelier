@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import NavBar from "../Component/NavBar"
+import GlassesFilter from "../Component/GlassesFilter"
 import GlassesCard from "../Component/GlassesCard"
 import Footer from "../Component/Footer"
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -12,7 +12,7 @@ export default class GlassesCardContainer extends Component {
                 </div>
 
                 <div className="glasses-collection-container">
-                    <NavBar
+                    <GlassesFilter
                         showLens={this.props.showLens}
                         showTinted={this.props.showTinted}
                         showClear={this.props.showClear}

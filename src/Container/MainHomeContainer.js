@@ -11,17 +11,17 @@ export default class MainHomeContainer extends Component {
                 <div className="home-inner"> 
     <div className="home-text">
         <div>
-            <button onClick={() => {
+             <p>Each pair is equipped with scratch-resistant lenses
+         that block 100% of UVA and UVB rays.
+          Starting at $95, with free shipping and free returns.
+             </p>
+             <button onClick={() => {
                         this.props.history.push("/collection")
                         this.props.showOnlyTint()
                     }}
                         className="shop-glasses-btn" >
                               Shop Sunglasses
              </button>
-             <p>Each pair is equipped with scratch-resistant lenses
-         that block 100% of UVA and UVB rays.
-          Starting at $95, with free shipping and free returns.
-             </p>
              </div>
     </div>
 
@@ -35,15 +35,15 @@ export default class MainHomeContainer extends Component {
 
     <div className="home-text">
       <div>
-      <button onClick={() => {
+        <p>Each pair is equipped with scratch-resistant lenses that block 100% of UVA and UVB rays. Starting at $95, with free shipping and free returns.
+        </p>
+        <button onClick={() => {
                         this.props.history.push("/collection")
                         this.props.showOnlyClear()
                     }}
                         className="shop-glasses-btn" >
                         Shop Eyeglasses
                         </button>
-        <p>Each pair is equipped with scratch-resistant lenses that block 100% of UVA and UVB rays. Starting at $95, with free shipping and free returns.
-        </p>
       </div>
     </div>
 

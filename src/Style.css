@@ -1,50 +1,66 @@
 :root {
     /* Base font size */
-    font-size: 12px;   
+    font-size: 10px;   
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans:wght@400;700&family=Ubuntu+Condensed&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); */
 
 .websiteTitle {
   margin:30px;
-font-family: 'Noto Sans', sans-serif;
-  font-size: 60px;
+  color:black;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  /* font-family: 'Crimson Text', serif; */
+/* font-family: 'Noto Sans', sans-serif; */
+  font-size: 3.5rem;
+  /* width: 800px; */
+  /* text-align:center */
   text-align:left;
+  /* border: red solid 3px; */
   float:left;
 }
 
-
-.mycart-btn {
+.mycart-btn{
+  /* float:right;
+  position:absolute; */
   float:right;
   position:relative;
-  right:5px;
+  right:50px;
   top:30px;
-  border-radius: 10px;
-  color:white;
-  width: 110px;
-  max-height:40px;
-  display:block;
-  font-size: 20px;
-  font-weight:bold;
-  /* text-align: center; */
-  background-color:tan;
-  font-family: 'Josefin Sans',sans-serif;
+  font-size:1.5rem;
+  padding:0.7em;
+  background-color: transparent;
+  border-radius: 5%;
 }
 
 .mycart-btn:hover{
-  background-color: white;
-  color:tan;
+  /* background-color: rgba(76, 128, 116, 0.603); */
+  color:rgba(86, 87, 88, 0.883);
+  cursor:pointer;
 }
-
 
 /* was 'body' before */
-body {
-  font-family: 'Noto Sans JP',sans-serif,'Exo 2';
-  text-align:center;
-  /* background: black; */
-  background: white;
-  min-height: 100vh;
-}
+  body {
+    font-family: 'Noto Sans JP',sans-serif,'Exo 2';
+    /* display: flex; */
+   
+    /* justify-content: center; */
+    /* align-items: center;   */
+    text-align:center;
+    /* background: black; */
+    background: white;
+    min-height: 100vh;
+  
+    /* margin-top: 600px; */
+  }
 
 
   .header-container{
@@ -54,79 +70,275 @@ body {
       background-color: white;
   }
 
- 
-
-  .clear-lenses { 
-   height:1000px;
-   min-height: 1000px;
-   min-width:50%;
-   background-image: url("./images/eyeglasses.jpeg");
-   background-repeat: no-repeat;
-   background-size: cover; 
-   background-position: center; 
-    /* border: 10px dotted yellow; */
-  }
-
+  /* clearing */
   .header-container:after {
     content:'';
     display:block; /* or whatever else than inline */
-    clear:both; 
-   }
-   
-  .tinted-lenses { 
-    height:1000px;
-    min-height: 1000px;
-    min-width:50%;
-    background-image: url("./images/sunglasses.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
-        /* border: 10px dotted rgb(172, 172, 172); */
+    clear:both; /*clear float*/
    }
 
+
+  #home-button-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    text-align:center;
+
+    /* border: red 1px solid; */
+    height:100%;
+  }
+  .main-home-background-div{
+    display: flex;
+    /* background-image: url("./images/HomeImage.jpg"); */
+    justify-content: center;
+    align-items: center;
+    height:1000px;
+    min-height: 1000px; 
+  }
+
+  .main-home-background-div::before{
+    content: "";
+    /* background-image: url("./images/HomeImage.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+height:100vh;
+width:100vw;
+    /* position: absolute; */
+    opacity: 40%;
+    /* top:0px;
+    right:0px;
+    bottom: 0px;
+    left:50%; */
+    max-height: 1000px;
+    box-sizing: border-box;
+
+    /* border:5px solid red; */
+    /* transform: translate(0%, 17%); */
+
+  }
+
+  .home-image-container{
+    display:flex;
+
+    flex-wrap: wrap;
+    height:max-content;
+  }
+
+.home-text{
+     /* background-image: url("./images/HomeImage0.jpeg");
+     background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; */
+    /* box-sizing: border-box; */
+    /* border:5px solid blue; */
+    height:60vh;
+width:30vw;
+display:flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(245, 241, 238);
+color:rgb(102, 101, 100)
+}
+
+.home-text  p {
+  max-width: 20vw;
+  font-size:1.4rem;
+  margin-bottom:3em;
+}
+
+
+.home-img > img{
+  height:60vh;
+    width:40vw;
+    /* border:5px solid blue; */
+}
+
+/* buttons */
+.shop-glasses-btn{
+  background-color: transparent;
+  border: 2px solid rgb(100, 101, 102);
+  border-radius: 5%;
+  padding:0.8em;
+  color:rgb(102, 101, 100);
+  font-size:1.5rem;
+  font-weight: bolder;
+} 
+.shop-glasses-btn:hover{
+  /* background-color: rgb(231, 228, 223); */
+  color:rgba(86, 87, 88, 0.63);
+  cursor:pointer;
+}
+
+
+
+
+.home-inner{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+  
+
+
+
+
+
+
+
+  .clear-lenses { 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height:1000px;
+   min-height: 1000px;
+   /* border: 10px dotted yellow; */
+  }
+
+  .tinted-lenses {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height:1000px;
+   min-height: 1000px;
+   /* border: 10px dotted yellow; */
+  }
+
+.tinted-lenses::before {
+    /* margin-top:100px; */
+    content: "";
+    /* background-image: url("./images/SunglassesImg.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    position: absolute;
+    opacity: 40%;
+    top:0px;
+    right:0px;
+    bottom: 0px;
+    left:50%;
+    max-height: 1000px;
+
+    /* border:5px solid red; */
+    transform: translate(0%, 17%);
+}
+
+.clear-lenses::before {
+    /* margin-top:100px; */
+  content: "";
+  /* background-image: url("./images/EyeglassesImgFlipped.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  opacity: 40%;
+  top:0px;
+  right:50%;
+  bottom: 0px;
+  left:0px;
+  max-height: 1000px;
+  /* border:5px solid blue; */
+  transform: translate(0%, 17%);
+}
 
 
 .clear-lenses button {
-    position: relative;
-   transform: translate(-130%, 900%);
+    position: absolute;
+    top: 50%;
+    margin-right: 50%;
+   transform: translate(0, 50%);
+   /* -ms-transform: translate(-50%, 0%); */
+    opacity:50%;
     border: none;
     color:white;
     text-decoration:none;
     background-color: transparent;
     font-size:100px;
     font-weight: bolder;
+    /* display: inline-block; */
   } 
-  
+  .clear-lenses:hover button {   
+    opacity: 1;
+  }
 
   .tinted-lenses button {
-    position: relative;
-    transform: translate(-180%,900%);
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(0,50%);
+     /*-ms-transform: translate(-50%, 0%); */
+    opacity:50%;
     border: none;
-    color:black;
+    color:white;
     text-decoration:none;
     background-color: transparent;
     font-size:100px;
     font-weight: bolder;
+    /* display: inline-block; */
   } 
+  .tinted-lenses:hover button {   
+    opacity: 1;
+  }
+
+
+  /* .button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  } */
+
+
+.tinted-lenses:hover::before{
+  opacity: 100%;
+  font:white;
+  font-size: 10rem;
+  font-weight: 200;
+}
+
+.clear-lenses:hover::before{
+  opacity: 100%;
+  font:white;
+  font-size: 10rem;
+  font-weight: 200;
+} */
+
+
+  img {
+max-width: 500px;
+max-height: 500px;
+  }
+
+  /* .clear-lenses-text {
+    display:none;
+  }
+.clear-lenses:hover .clear-lenses-text {
+  color:#000;
+  display:inline;
+  font-size: 500px;
+} */
+
+
 
 
 /* glasses-collection-container */
 .glasses-collection-container {
     background-color: white;
     display:flex;
-    min-height:1000px 
 }
 
 /* glasses-card component*/
 .glasses-card-container {
-height:100%;
+    height:100%;
 display:flex;
 flex-wrap:wrap;
 justify-content: center; 
 align-items: center;  
 margin: 0 auto;
 }
-
 
 .card-image {
 /* max-height: 400px; */
@@ -135,71 +347,95 @@ max-width: 400px;
 
 .glasses-card {
   max-width: 500px;
-  border:whitesmoke solid 5px;
+  border:whitesmoke solid 2px;
 }
 
-.glasses-card:hover{
-  border:rgb(209, 204, 204) solid 5px;
-  transition: ease-in-out all .1s
+.filter-sort-div-container{
+  /* border: 1px solid red; */
+  margin-right:0.5rem;
 }
-
 
 .filters-category {
-  display: flex;
-  flex-direction:column;
-  /* border: black solid 1px; */
-  align-items:baseline;
-  align-self:baseline;
-  width:170px;
-  padding: 20px;
+  /* display: flex; */
+  /* flex-direction:column; */
+  /* align-items:baseline; */
+  /* align-self:baseline; */
+min-width: 180px;
+max-width:200px;
+  /* padding: 20px; */
+  text-align:left;
   font-size: 13px;
-  border: rgb(190, 199, 207) 1px solid;
+  border-top: rgb(190, 199, 207) 1px solid;
+  border-right: rgb(190, 199, 207) 1px solid;
   box-sizing: border-box;
+  padding: 1.5em 2em;
+  /* background-color: yellow; */
 }
 
+.filters-category:nth-last-child(2) {
+  border-bottom: rgb(190, 199, 207) 1px solid;
+}
+
+.filters-category ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.filters-category  li {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+.filters-category span{
+  position:relative;
+  padding: 0 5px 0 5px;
+}
+
+.filters-category input {
+margin-right:0.5em;
+}
 
 .div-navbuttons{
+  margin-top:1em;
   margin-left:0;
 padding:0;
 text-align:left;
 }
 
-.sort-Buttons {
-  width:150px;
-  margin-top:2px;
-  /* margin-bottom:2px; */
-}
 
 /* .sort-Buttons { */
-  button {
-  /* padding-left:15px; */
+  .div-navbuttons > button {
   border: rgb(241, 241, 241) 1px;
-  width: 110px;
+  width:180px;
   height: 40px;
   font-size: 12px;
-  /* text-align: center; */
   background-color:rgb(241, 241, 241);
-  font-family: sans-serif;
-  border-radius:10px;
+  font-family: 'Noto Sans JP',sans-serif;
+  margin-top:0.3em;
 }
-
-.gray-button:active{
-  background-color: lightgray;
-}
-
 .glasses-collection-outer-container{
   background-color: white;
 }
 
+.collection-top-image-div{
+  background-image:  url("./images/top-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  height:480px;
+  margin-bottom:50px;
+}
 
 
-.link-to-glassesid, .link-to-home {
+/* GlassesCard comp */
+.link-to-glassesid {
   /* text-decoration: none; */
   color: inherit;
   text-decoration: inherit;
 }
+/* or style={{ textDecoration: 'none' }} */
 
-/* GlassesCard comp */
 .glasses-name {
   margin-top:25px;
   font-size:18px;
@@ -219,16 +455,16 @@ text-align:left;
 
 .display-container-div {
   display:flex;
-  /* flex-wrap:wrap; */
-  margin-left:100px;
-  padding-bottom:100px;
+  flex-wrap:wrap;
 }
 
 .display-image-div {
   width: 600px;
+  /* border: black 1px solid; */
+  /* display:flex;
+  flex-wrap:wrap;
+  flex-direction:row; */
   float:left;
-  box-sizing: border-box;
-  padding-top: 200px
 }
 
 .display-image-main-image {
@@ -238,19 +474,16 @@ text-align:left;
 
 .display-image-thumbnail-image {
   width: 200px;
-  float:left;
-  /* border:rgb(197, 181, 181) 1px solid; */
-  /* border-radius:1%; */
+  float:left
 }
 
 .display-info-div {
-  max-width:400px;
-  margin-left:100px;
+  width:400px;
   margin-top: 200px;
-  /* border: black 1px solid; */
+  border: black 1px solid;
 }
 
-#glasses-info-header {
+.glasses-info-header {
   text-align:left;
   padding: 20px;
 }
@@ -280,29 +513,23 @@ text-align:left;
 }
 
 .username-title-input {
-  font-size:12px;
   border:none;
   padding-top:5px;
   padding-bottom:5px;
-  border-bottom: 1px black solid;
-  margin-bottom:10px;
+  border-bottom: 1px black solid
 }
 
 .review-input {
-  font-size:12px;
-  font-family:'Noto Sans JP',sans-serif,'Exo 2';
   height:100px;
-  /* margin-top: 15px; */
+  margin-top: 15px;
   border:none;
   background-color: rgb(241, 241, 241);
-  width:100%;
-  display:block;
-  padding:5px;
 }
 
 .form-submit-button {
   /* padding-left:15px; */
   border: rgb(241, 241, 241) 1px;
+  /* background: transparent; */
   width: 110px;
   height: 40px;
   font-size: 12px;
@@ -310,155 +537,4 @@ text-align:left;
   background-color:rgb(241, 241, 241);
   font-family: 'Noto Sans JP',sans-serif;
   margin-top: 15px;
-  border-radius: 10px;
-}
-
-/* Review Comp */
-.review-container-div{
-  margin-top:15px;
-  padding:20px;
-  text-align:left;
-  border-bottom: rgb(223, 217, 217) solid 1px;
-}
-
-.review-title, .review-username,.review {
-  margin-bottom: 5px;
-}
-
-/* Cart page container */
-.myShoppingCart {
- margin-bottom: 30px;
-}
-
-.cart-container-div{
-padding-bottom:100px;
-}
-
-.comparison-button{
-  background:cornflowerblue;
-  color: white;
-  font-size: 24px;
-  height:90px;
-  width: 150px;
-  font-weight:bold;
-  margin-bottom: 10px;
-}
-
-.checkout-button{
-  background:lightcoral;
-  color: white;
-  font-size: 24px;
-  height:45px;
-  width: 150px;
-  font-weight:bold;
-}
-
-/* Cart Item */
-.cartitem-div{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-margin-bottom:30px;
-}
-
-.cart-item-image{
-  top:-50px;
-  position:relative;
-  max-width:400px;
-}
-
-#cart-item-info > * {
-  text-align: left;
-  margin: 5px;
-}
-
-.cart-quantity-div{
-  display:flex;
-  flex-wrap:wrap;
-  margin-top: 15px;
-}
-
-.cart-quantity-div button{
-  margin-right: 10px;
-  border-radius:10px;
-}
-
-/* CompareContainer  */
-.compare-p{
-  font-size: 30px;
-  margin-bottom: 100px;
-  margin-top: 100px;
-}
-.compare-page{
-display:flex;
-justify-content: center;
-padding-bottom:200px;
-}
-
-.compare-container-div{
-  display:flex;
-  flex-wrap:wrap;
-  max-width:1250px;
-/* margin: auto 0; */
-}
-
-/* CompareItem Comp */
-.img-item-compared {
-  max-width:600px;
-  margin-bottom:20px;
-}
-
-.img-comparison > *{
-  text-align:center;
-  margin:0;
-  /* border:black solid 1px; */
-}
-
-/* .x-btn {
-  border:green 1px solid;
-  background:lightgray;
-  color:white;
-  font-size:100px;
-  border-radius:100%;
-  box-sizing: border-box; 
-width:100px;
-height: 100px;
-display:flex;
-justify-content: center;
-align-items: center;
-} */
-.x-btn {
-background: rgb(231, 231, 231);
-color: white;
-text-align: center;
-width: 50px;
-height: 50px;
-border-radius: 100%;
-display: inline-flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-font-size: 25px;
-font-weight:bold;
-text-decoration: none
-}
-
-/* to solve purple rectangle */
-.link-to-cart {
-color: inherit;
-text-decoration: inherit;
-}
-
-.img-comparison-parent-div:first-child {
-  border-right:rgb(200, 200, 200) solid 2px;
-
-}
-
-#footer{
-  position: fixed;
-  bottom: 0;
-  background:rgb(241, 241, 241);
-  width: 100%;
-  text-align:left;
-  padding:20px;
 }
