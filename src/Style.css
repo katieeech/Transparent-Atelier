@@ -3,12 +3,11 @@
     font-size: 12px;   
   }
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 .websiteTitle {
   margin:30px;
-  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Noto Sans', sans-serif;
   font-size: 60px;
   text-align:left;
   float:left;

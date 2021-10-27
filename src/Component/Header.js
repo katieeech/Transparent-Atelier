@@ -8,7 +8,7 @@ export default class Header extends Component {
         return (
             <div className="header-container">
                 <Link to="/" className="link-to-home">
-                    <div className="websiteTitle">APP-TIQUE VISUELLE</div>
+                    <div className="websiteTitle">Transparent Atelier</div>
                 </Link>
                 <Link to="/cart">
                     {/* <div className="mycart-btn-container"> */}
