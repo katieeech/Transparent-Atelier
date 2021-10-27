@@ -60,9 +60,9 @@ export default class CartContainer extends Component {
                         </h3>
 
                     <div className="cart-btn-container">
-                        <button className="checkout-button">
+                        {/* <button className="checkout-button">
                             CHECKOUT
-                        </button>
+                        </button> */}
                         <Link to="/collection">
                             <button className="continue-shopping-btn">
                                 CONTINUE SHOPPING
