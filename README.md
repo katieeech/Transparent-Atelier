@@ -1,7 +1,7 @@
 
 <br>
 
-# Transparent Atelier
+# Transparent Atelier 
 
 Transparent Atelier is a mock online store for eyewears. Users can filter items by sunglasses and eyeglasses upon their arrival to the app. Users can filter for different brands, lenses, materials, colors, etc. It allows users to view each item in detail and comment on items. Users' selected eyewears stay in their cart and there is a special helper feature which narrows their selection down.
 
